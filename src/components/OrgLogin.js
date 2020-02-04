@@ -9,6 +9,7 @@ const OrgLogin = ({values, errors, touched, status}) => {
 
     return (
         <section className='register-section'>
+            <h1>Organization Login</h1>
             <Form>
 
             <div className='user-input-container'>
@@ -66,7 +67,7 @@ password: Yup.string().min(8).required(),
 
 handleSubmit(values) {
     console.log('submitting',values);
-    axios.post('https://bw-save-the-animals.herokuapp.com/auth/register')
+    axios.post('https://bw-save-the-animals.herokuapp.com/auth/login')
     .then(res => {
         console.log('post is working', res)
        

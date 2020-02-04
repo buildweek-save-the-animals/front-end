@@ -5,7 +5,8 @@ import { Route } from 'react-router-dom'
 // import HomePage from './components/homePage';
 import NavBar from './components/navBar';
 import FormikRegister from './components/registerPage';
-import FormikOrgLogin from './components/OrgLogin'
+import FormikOrgLogin from './components/OrgLogin';
+import FormikDonorLogin from './components/userLogin';
 
 
 
@@ -26,6 +27,10 @@ function App() {
 
       <Route path='/organizationLogin'>
       <FormikOrgLogin/>
+      </Route>
+
+      <Route path='/donorLogin'>
+      <FormikDonorLogin/>
       </Route>
       
       </div>
