@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios'
 
 
 const RegisterPage = ({values, errors, touched, status}) => {
-// set state for posting users
-// const [users, setUsers] = useState([]);
-// useEffect(()=>{
-//     console.log('status has changed', status);
-//     status && setUsers(users => 
-//        [...users, status])
-// },[status])
+
 
     return (
         <section className='register-section'>
@@ -90,12 +84,12 @@ radio:Yup.string().required(),
 }),
 
 
-handleSubmit(values,formikBag) {
+handleSubmit(values) {
     console.log('submitting',values);
     axios.post('https://bw-save-the-animals.herokuapp.com/auth/register')
     .then(res => {
         console.log('post is working', res)
-        // setStatus(res.data)
+       
     })
     .catch(err => console.log(err.res))
 }
