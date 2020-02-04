@@ -1,13 +1,31 @@
 import React from 'react';
+import { Container } from '@material-ui/core';
 import './App.css';
+import { Route } from 'react-router-dom'
+// import HomePage from './components/homePage';
+import NavBar from './components/navBar';
+import FormikRegister from './components/registerPage';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Container maxWidth="sm">
 
-      </header>
-    </div>
+    <div className="App">
+      <NavBar />
+
+      {/* <Route exact path='/'>
+        <HomePage />
+        </Route> */}
+
+      <Route path='/register'>
+      <FormikRegister/>
+      </Route>
+      
+      </div>
+      
+    </Container>
   );
 }
 
