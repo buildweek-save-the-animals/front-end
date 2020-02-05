@@ -86,7 +86,7 @@ radio:Yup.string().required(),
 
 handleSubmit(values) {
     console.log('submitting',values);
-    axios.post('https://bw-save-the-animals.herokuapp.com/auth/register')
+    axios.post('https://bw-save-the-animals.herokuapp.com/auth/register',values)
     .then(res => {
         console.log('post is working', res)
        

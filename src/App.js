@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '@material-ui/core';
 import './App.css';
 import { Route } from 'react-router-dom'
-// import HomePage from './components/homePage';
+import HomePage from './components/homePage';
 import NavBar from './components/navBar';
 import FormikRegister from './components/registerPage';
 import FormikOrgLogin from './components/OrgLogin';
@@ -17,9 +17,9 @@ function App() {
     <div className="App">
       <NavBar />
 
-      {/* <Route exact path='/'>
+      <Route exact path='/'>
         <HomePage />
-        </Route> */}
+        </Route>
 
       <Route path='/register'>
       <FormikRegister/>

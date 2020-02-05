@@ -67,7 +67,7 @@ password: Yup.string().min(8).required(),
 
 handleSubmit(values) {
     console.log('submitting',values);
-    axios.post('https://bw-save-the-animals.herokuapp.com/auth/login')
+    axios.post('https://bw-save-the-animals.herokuapp.com/auth/login',values)
     .then(res => {
         console.log('post is working', res)
        
