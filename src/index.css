@@ -12,6 +12,16 @@ code {
     monospace;
 } */
 
+
+html {
+  box-sizing: border-box;
+}
+
+
 body {
-  background-color: #282c34;
+  margin:auto;
+  /* background-image:url('./images/luca-bravo-forest-macro.jpg') ;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-size: cover; */
 }

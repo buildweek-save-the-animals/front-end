@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
+// import { Container } from '@material-ui/core';
 import './App.css';
 import { Route } from 'react-router-dom'
 import HomePage from './components/homePage';
@@ -8,15 +8,17 @@ import FormikRegister from './components/registerPage';
 import FormikOrgLogin from './components/OrgLogin';
 import FormikDonorLogin from './components/userLogin';
 import CampaignSummary from './components/campaignSummary'
+// import lbRain from './images/luca-bravo-forest-macro';
 
 
 
 function App() {
   return (
-    <Container maxWidth='sm'>
+    // <Container maxWidth='sm'>
    
 
-    <div className="App">
+    <div  className="App">
+   
       <NavBar />
 
       <Route exact path='/'>
@@ -40,7 +42,7 @@ function App() {
       </Route>
       </div>
     
-    </Container>
+    // </Container>
   );
 }
 
