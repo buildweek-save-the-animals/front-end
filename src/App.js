@@ -1,3 +1,13 @@
+// <<<<<<< wes-moody
+// import React from "react";
+// import "./App.css";
+
+// function App() {
+//   return (
+//     <div className='App'>
+//       <h1>Puppies!</h1>
+//     </div>
+// =======
 import React from 'react';
 import { Container } from '@material-ui/core';
 import './App.css';
@@ -31,6 +41,7 @@ function App() {
       </div>
 
     </Container>
+// >>>>>>> master
   );
 }
 
