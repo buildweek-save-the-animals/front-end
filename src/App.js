@@ -13,7 +13,8 @@ import CampaignSummary from './components/campaignSummary'
 
 function App() {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth='sm'>
+   
 
     <div className="App">
       <NavBar />
@@ -22,9 +23,9 @@ function App() {
         <HomePage />
         </Route>
 
-      <Route path='/register'>
-      <FormikRegister/>
-      </Route>
+        <Route path='/register'>
+          <FormikRegister />
+        </Route>
 
       <Route path='/organizationLogin'>
       <FormikOrgLogin/>
@@ -37,9 +38,8 @@ function App() {
       <Route path='/campaignSummary'>
         <CampaignSummary/>
       </Route>
-      
       </div>
-
+    
     </Container>
   );
 }
