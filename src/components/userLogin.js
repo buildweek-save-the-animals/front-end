@@ -1,11 +1,13 @@
 import React from "react";
 import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios'
+import axios from 'axios';
+import { Redirect } from "react-router-dom"
 
 
-const DonorLogin = ({values, errors, touched, status}) => {
 
+const DonorLogin = (props, {values, errors, touched, status}) => {
+console.log(props)
 
     return (
         <section className='register-section'>
@@ -40,6 +42,7 @@ const DonorLogin = ({values, errors, touched, status}) => {
 
 
             </Form>
+            
 
 
         </section>
@@ -69,11 +72,13 @@ handleSubmit(values) {
     console.log('submitting',values);
     axios.post('https://bw-save-the-animals.herokuapp.com/auth/login',values)
     .then(res => {
-        console.log('post is working', res)
+        console.log('post is working', res),
+        props.history.push('/campaignSummary')
+        
        
     })
     .catch(err => console.log(err.res))
-}
+},
 
 
 })(DonorLogin)

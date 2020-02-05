@@ -7,6 +7,7 @@ import NavBar from './components/navBar';
 import FormikRegister from './components/registerPage';
 import FormikOrgLogin from './components/OrgLogin';
 import FormikDonorLogin from './components/userLogin';
+import CampaignSummary from './components/campaignSummary'
 
 
 
@@ -31,6 +32,10 @@ function App() {
 
       <Route path='/donorLogin'>
       <FormikDonorLogin/>
+      </Route>
+
+      <Route path='/campaignSummary'>
+        <CampaignSummary/>
       </Route>
       
       </div>

@@ -14,6 +14,8 @@ export default function CampaignSummary() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
+  
+  
   useEffect(() => {
    
     

@@ -3,20 +3,6 @@ import React from "react";
 
 
 
-// const Carddiv = styled.div `
-// background-color:#14737D;
-// margin:5%;
-// border-radius: 35px
-
-// `
-// const H2card = styled.h2 `
-// padding:3%;
-// `
-
-// const Licard = styled.li `
-// padding:3%;
-
-// `
 
 
 
