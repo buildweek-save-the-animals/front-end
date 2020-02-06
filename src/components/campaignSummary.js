@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CampaignCard from './campaignCards';
 import SearchForm from "./searchForm";
 import axios from 'axios';
-import data from './dummyData'
+
 
 
 

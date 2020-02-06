@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Container } from '@material-ui/core';
 import './App.css';
-import { Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import HomePage from './components/homePage';
 import NavBar from './components/navBar';
 import FormikRegister from './components/registerPage';
@@ -15,7 +15,8 @@ import OrganizationHome from './components/organizerPage';
 
 
 
-function App() {
+function App(props) {
+  // console.log(props)
   return (
     // <Container maxWidth='sm'>
    
@@ -29,15 +30,15 @@ function App() {
         </Route>
 
         <Route path='/register'>
-          <FormikRegister />
+          <FormikRegister {...props} />
         </Route>
 
       <Route path='/organizationLogin'>
-      <FormikOrgLogin/>
+      <FormikOrgLogin {...props}/>
       </Route>
 
       <Route path='/donorLogin'>
-      <FormikDonorLogin/>
+      <FormikDonorLogin {...props}/>
       </Route>
 
       <Route path='/campaignSummary'>
@@ -45,11 +46,11 @@ function App() {
       </Route>
 
       <Route path='/addCampaign'>
-        <FormikAddCamp/>
+  <FormikAddCamp {...props}/>
       </Route>
 
       <Route path = '/organizationPage'>
-        <OrganizationHome/>
+        <OrganizationHome {...props}/>
       </Route>
       </div>
     
@@ -57,4 +58,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

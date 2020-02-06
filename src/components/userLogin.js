@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import styled from 'styled-components';
 import { Redirect } from "react-router-dom"
-import { Link } from 'react-router-dom';
+
 
 const Bttn = styled.button `
 margin:15% 40%;
@@ -29,7 +29,7 @@ const DonorLogin = ( {values, errors, touched, status}) => {
     return (
         <section className='register-section'>
             <H1>Donor Login</H1>
-            <Link to='/campaignSummary'>temp link to camp summary</Link>
+            
             <Form>
 
             <div className='user-input-container'>
@@ -91,7 +91,7 @@ handleSubmit(values, props) {
     axios.post('https://reqres.in/api/login_',values)
     .then(res => {
         console.log('post is working', res)
-        props.history.push('/campaignSummary');
+        props.props.history.push('/campaignSummary');
     //    return( <Redirect to ='/campaignSummary'/>)
        
     })

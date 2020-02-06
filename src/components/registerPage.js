@@ -102,7 +102,9 @@ handleSubmit(values,props) {
     axios.post('https://reqres.in/api/register_',values)
     .then(res => {
         console.log('post is working', res)
-        props.history.push('/')
+       res.data.radio === 'donor'?
+        props.props.history.push('/donorLogin'):
+        props.props.history.push('/organizationLogin')
     })
     .catch(err => console.log(err.res))
 }

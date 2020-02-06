@@ -3,10 +3,10 @@ import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 
 const Bttn = styled.button `
-margin:15% 40%;
+    margin:15% 40%;
     padding:5% 5%;
     border-radius: 5px;
     box-shadow: 3px 3px 0px 2px rgb(133, 149, 136)
@@ -28,7 +28,7 @@ const OrgLogin = ({values, errors, touched, status}) => {
     return (
         <section className='register-section'>
             <H1>Organization Login</H1>
-            <Link to='/organizationPage'>temp link to org page</Link>
+            
             <Form>
 
             <div className='user-input-container'>
@@ -85,11 +85,12 @@ password: Yup.string().min(8).required(),
 
 
 handleSubmit(values,props) {
+    console.log(props)
     console.log('submitting',values);
     axios.post('https://reqres.in/api/login_',values)
     .then(res => {
         console.log('post is working', res)
-       props.history.push('/');
+       props.props.history.push('/organizationPage');
     })
     .catch(err => console.log(err.res))
 }

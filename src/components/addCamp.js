@@ -1,8 +1,11 @@
 import React from "react";
 import {withFormik, Form, Field} from 'formik';
+import { Route } from 'react-router-dom'
 import * as Yup from 'yup';
 import axios from 'axios';
 import styled from 'styled-components';
+
+
 
 const Bttn = styled.button `
 margin:15% 40%;
@@ -47,7 +50,8 @@ margin:5px
 `
 
 
-const AddCamp = ({errors,touched}) => {
+const AddCamp = ({errors,touched,props}) => {
+    // console.log(props)
 return (
     <Section className='add-campaign'>
         <H1>Add Campaign</H1>
@@ -100,6 +104,9 @@ return (
              <Bttn type='submit'>Add</Bttn>
 
 </Form>
+
+    
+
 </Section>
 )
 }
@@ -133,7 +140,7 @@ const FormikAddCamp = withFormik({
         axios.post('https://reqres.in/api/users',values)
         .then(res => {
             console.log('posting',res)
-            props.history.push('/')
+            props.props.history.push('/organizationPage')
         })
         .catch(err => console.log(err.res))
     }
