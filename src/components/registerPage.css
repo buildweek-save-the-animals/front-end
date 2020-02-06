@@ -5,9 +5,10 @@
         height: 600px;
         margin: auto;
         margin-top: 5%;
-        background-color:rgb(37, 68, 95,0.5);
-        box-shadow: 3px 3px 5px 5px rgb(133, 149, 136);
+        background-color:rgb(37, 68, 95,0.9);
+        box-shadow: 3px 3px 1px 1px rgb(133, 149, 136);
         border-radius: 10px;
+        color:rgb(255, 255, 255);
         
         
     

@@ -1,4 +1,5 @@
 import React from "react";
+import './campaignCards.css';
 
 
 
@@ -9,7 +10,7 @@ import React from "react";
 export default function CampaignCard(props) {
   return (
           <div className='card-div'>
-            
+            <h1>Really Dumb Data</h1>
         <h2>{props.camp.email}</h2>
             <ul>Campaign Details</ul>
             <h3>{props.camp.first_name}</h3>

@@ -1,6 +1,22 @@
 import React from "react";
+import styled from 'styled-components';
+
+const SectionSearch = styled.section `
+text-align:center;
+padding-top:2%
 
 
+`
+
+const Input = styled.input `
+width:20%;
+padding:.5%;
+box-shadow:inset 1px 1px 1px #000000;
+`
+
+const Form = styled.form `
+
+`
 
 export default function SearchForm(props) {
 
@@ -15,20 +31,20 @@ export default function SearchForm(props) {
   
 
   return (
-    <section className="search-form">
+    <SectionSearch className="search-form">
       
       
-      <form>
+      <Form>
         
-         <input
+         <Input
           type="text"
           placeholder="Search by Name"
           value={props.searchTerm}
           onChange={handleChange}
         />
         
-</form>
+</Form>
     
-    </section>
+    </SectionSearch>
   );
 }
