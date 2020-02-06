@@ -12,8 +12,8 @@ export default function CampaignCard(props) {
             
         <h2>{props.camp.email}</h2>
             <ul>Campaign Details</ul>
-            <li>{props.camp.first_name}</li>
-            <li>{props.camp.last_name}</li>
+            <h3>{props.camp.first_name}</h3>
+            <h3>{props.camp.last_name}</h3>
             
         </div>
 
@@ -22,3 +22,13 @@ export default function CampaignCard(props) {
   
         
 }
+
+// the keys would actually be :
+    // title: 
+    // location: 
+    // description:
+       
+    // urgency: 
+    // funding_goal: 
+    // created_at: 
+    // created_by:
