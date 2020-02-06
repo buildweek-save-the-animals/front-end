@@ -7,7 +7,10 @@ import NavBar from './components/navBar';
 import FormikRegister from './components/registerPage';
 import FormikOrgLogin from './components/OrgLogin';
 import FormikDonorLogin from './components/userLogin';
-import CampaignSummary from './components/campaignSummary'
+import CampaignSummary from './components/campaignSummary';
+import FormikAddCamp from './components/addCamp';
+import OrganizationHome from './components/organizerPage';
+
 // import lbRain from './images/luca-bravo-forest-macro';
 
 
@@ -39,6 +42,14 @@ function App() {
 
       <Route path='/campaignSummary'>
         <CampaignSummary/>
+      </Route>
+
+      <Route path='/addCampaign'>
+        <FormikAddCamp/>
+      </Route>
+
+      <Route path = '/organizationPage'>
+        <OrganizationHome/>
       </Route>
       </div>
     

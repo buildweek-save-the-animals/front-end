@@ -28,7 +28,7 @@ const OrgLogin = ({values, errors, touched, status}) => {
     return (
         <section className='register-section'>
             <H1>Organization Login</H1>
-            <Link to='organizationPage'>temp link to org page</Link>
+            <Link to='/organizationPage'>temp link to org page</Link>
             <Form>
 
             <div className='user-input-container'>
