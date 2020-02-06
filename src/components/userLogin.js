@@ -3,7 +3,8 @@ import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import styled from 'styled-components';
-// import { Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const Bttn = styled.button `
 margin:15% 40%;
@@ -28,6 +29,7 @@ const DonorLogin = ( {values, errors, touched, status}) => {
     return (
         <section className='register-section'>
             <H1>Donor Login</H1>
+            <Link to='/campaignSummary'>temp link to camp summary</Link>
             <Form>
 
             <div className='user-input-container'>
@@ -77,23 +79,24 @@ const FormikDonorLogin = withFormik({
 
 
 validationSchema: Yup.object().shape({
-username: Yup.string().required(),
+    username: Yup.string().required(),
 password: Yup.string().min(8).required(),
 
 
 }),
 
 
-handleSubmit(values) {
+handleSubmit(values, props) {
     console.log('submitting',values);
-    axios.post('https://bw-save-the-animals.herokuapp.com/auth/login',values)
+    axios.post('https://reqres.in/api/login_',values)
     .then(res => {
         console.log('post is working', res)
-        // props.history.push('/campaignSummary')
-        
+        props.history.push('/campaignSummary');
+    //    return( <Redirect to ='/campaignSummary'/>)
        
     })
     .catch(err => console.log(err.res))
+
 },
 
 

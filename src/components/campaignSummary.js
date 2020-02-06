@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import CampaignCard from './campaignCards';
-import axios from 'axios';
-
 import SearchForm from "./searchForm";
-
+import axios from 'axios';
+import data from './dummyData'
 
 
 
@@ -19,10 +18,10 @@ export default function CampaignSummary() {
   useEffect(() => {
    
     
-      axios.get('https://bw-save-the-animals.herokuapp.com/campaigns/')
+      axios.get('https://reqres.in/api/users?page=2')
       .then(res => {
         console.log(res)
-        setCampaign(res);
+        setCampaign(res.data.data);
         
       })
       .catch(error => {
@@ -35,7 +34,7 @@ export default function CampaignSummary() {
   
   useEffect(() => {
       const results = campaign.filter(element =>
-          element.title.toLowerCase().includes(searchTerm));
+          element.first_name.toLowerCase().includes(searchTerm));
           setSearchResults(results);
   }, [searchTerm]);
 

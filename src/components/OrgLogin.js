@@ -1,8 +1,9 @@
 import React from "react";
 import {withFormik, Form, Field} from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios'
-import styled from 'styled-components'
+import axios from 'axios';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Bttn = styled.button `
 margin:15% 40%;
@@ -27,6 +28,7 @@ const OrgLogin = ({values, errors, touched, status}) => {
     return (
         <section className='register-section'>
             <H1>Organization Login</H1>
+            <Link to='organizationPage'>temp link to org page</Link>
             <Form>
 
             <div className='user-input-container'>
@@ -82,12 +84,12 @@ password: Yup.string().min(8).required(),
 }),
 
 
-handleSubmit(values) {
+handleSubmit(values,props) {
     console.log('submitting',values);
-    axios.post('https://bw-save-the-animals.herokuapp.com/auth/login',values)
+    axios.post('https://reqres.in/api/login_',values)
     .then(res => {
         console.log('post is working', res)
-       
+       props.history.push('/');
     })
     .catch(err => console.log(err.res))
 }

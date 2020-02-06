@@ -97,12 +97,12 @@ radio:Yup.string().required(),
 }),
 
 
-handleSubmit(values) {
+handleSubmit(values,props) {
     console.log('submitting',values);
-    axios.post('https://bw-save-the-animals.herokuapp.com/auth/register',values)
+    axios.post('https://reqres.in/api/register_',values)
     .then(res => {
         console.log('post is working', res)
-       
+        props.history.push('/')
     })
     .catch(err => console.log(err.res))
 }
