@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import * as Yup from 'yup';
 import axios from 'axios';
 import styled from 'styled-components';
+import './addCampaign.css';
 
 
 
@@ -28,9 +29,10 @@ width: 400px;
 height: 600px;
 margin: auto;
 margin-top: 5%;
-background-color:rgb(37, 68, 95,0.5);
+background-color:rgb(37, 68, 95,0.9);
 box-shadow: 3px 3px 5px 5px rgb(133, 149, 136);
 border-radius: 10px;
+color:rgb(255, 255, 255);
 
 `
 
@@ -45,7 +47,8 @@ const Radio = styled.div `
 display:flex;
 flex-direction:row;
 text-align:center;
-margin:5px
+margin:1% 13%;
+
 
 `
 
@@ -80,13 +83,13 @@ return (
 
                 <H5>Urgency</H5>
 
-                <label className='checkBox-camp'><H5>Low</H5>
+                <label className='checkBox-camp'><H5>Low-</H5>
                 <Field type='radio' name='radio' value='low'></Field>
                 {touched.radio && errors.radio && <p className='errors-camp'>{errors.radio}</p>}
                 </label>
 
                 
-                <label className='checkBox-camp2'><H5>Medium</H5>
+                <label className='checkBox-camp2'><H5>Medium-</H5>
                 <Field type='radio' name='radio' value='medium'></Field>
                 {touched.radio && errors.radio && <p className='errors-camp'>{errors.radio}</p>}
                 </label>
@@ -98,7 +101,7 @@ return (
 
             </Radio>
 
-            <label className='fund-goal'><H5>Funding Goal</H5><Field type='text' name='goal'></Field>
+            <label className='fund-goal'><H5>Funding Goal</H5><Field className='fund-field' type='text' name='goal'></Field>
              </label>
 
              <Bttn type='submit'>Add</Bttn>
@@ -116,7 +119,7 @@ const FormikAddCamp = withFormik({
 
         return {
             title:props.title || '',
-            location:props.location || '',
+            location: '',
             description:props.description || '',
             radio:props.radio || '',
             goal:props.goal || '',
