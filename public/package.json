@@ -1,0 +1,19 @@
+{
+  "name": "marketing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildweek-save-the-animals/marketing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buildweek-save-the-animals/marketing-page/issues"
+  },
+  "homepage": "https://github.com/buildweek-save-the-animals/marketing-page#readme"
+}
