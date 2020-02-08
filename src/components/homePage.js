@@ -28,8 +28,8 @@ const HomePage = () => {
     return (
         <HomeDiv>
             <H1title className='home-title'>Save The Animals</H1title>
-            <Pgraph>Will need to add something relatively original here-->
-            Key Conservation is helping conservationists receive critical funding and increased global support through an app that provides real-time updates on day-to-day campaigns. We can stop global extinction if we utilize new technology and interact with supporters in ways that they want! </Pgraph>
+            <Pgraph>
+            Save The Animals is helping conservationists receive critical funding and increased global support through an app that provides real-time updates on day-to-day campaigns. We can stop global extinction if we utilize new technology and interact with supporters in ways that they want! </Pgraph>
         </HomeDiv>
     )
 }
